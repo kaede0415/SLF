@@ -63,4 +63,10 @@ client.on('message', async message => {
   }
 });
 
+client.on('message', async message => {
+if(message.channel.id === "876405324989489192" && message.author.id === "759001587422462015" && message.content == "rin"){
+message.channel.send("rin")
+  }
+});
+
 client.login("ODk2OTc3NTU2NjUyMjk0MTU1.YfhyYA.UPWOzLvni8BL5YOYhJaRKhgJqbs")
