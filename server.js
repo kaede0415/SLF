@@ -54,10 +54,12 @@ client.on('message', async message => {
   if(message.author.id === "707459939446161438" || message.author.id === "759001587422462015"){
   if (message.content.toLowerCase().startsWith("!9say")) {
    const [name, ...args] = message.content.slice(3).split("y ");
+  message.delete()
   message.channel.send(args[0])
     }
   if (message.content.toLowerCase().startsWith("!allsay")) {
    const [name, ...args] = message.content.slice(3).split("y ");
+  message.delete()
   message.channel.send(args[0])
     }
   }
