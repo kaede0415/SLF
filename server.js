@@ -40,10 +40,10 @@ client.on('message', async message => {
   return;
 }
   if(message.author.id === "707459939446161438" || message.author.id === "759001587422462015"|| message.author.id === "945460382733058109")
-  if (message.content.toLowerCase().startsWith("!say")) {
-   const [name, ...args] = message.content.slice(3).split("y ");
+  if (message.content.toLowerCase().startsWith("!say ")) {
+   const SayMessage = message.content.slice(5).trim(); 
   message.delete()
-  message.channel.send(args[0])
+  message.channel.send(SayMessage)
   }
 });
 
