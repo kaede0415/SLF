@@ -35,40 +35,28 @@ client.on("ready", () => {
 console.log(`${client.user.tag} is ready!`)
 });
 
-function sendReply(message, text){
-  message.reply(text)
-    .then(console.log("リプライ送信: " + text))
-    .catch(console.error);
+client.on('message', async message => {
+  if(message.author.bot){
+  return;
 }
-
-function sendMsg(channelId, text, option={}){
-  client.channels.get(channelId).send(text, option)
-    .then(console.log("メッセージ送信: " + text + JSON.stringify(option)))
-    .catch(console.error);
-}
+  if(message.author.id === "707459939446161438" || message.author.id === "759001587422462015"|| message.author.id === "945460382733058109")
+  if (message.content.toLowerCase().startsWith("!say")) {
+   const [name, ...args] = message.content.slice(3).split("y ");
+  message.delete()
+  message.channel.send(args[0])
+  }
+});
 
 client.on('message', async message => {
   if(message.author.bot){
   return;
 }
-  if(message.author.id === "707459939446161438" || message.author.id === "759001587422462015"){
-  if (message.content.toLowerCase().startsWith("!9say")) {
-   const [name, ...args] = message.content.slice(3).split("y ");
+  if(message.author.id === "707459939446161438" || message.author.id === "759001587422462015"|| message.author.id === "945460382733058109")
+  if (message.content.toLowerCase().startsWith("!cat2")) {
+   const SayMessage = message.content.slice(6).trim(); 
   message.delete()
-  message.channel.send(args[0])
-    }
-  if (message.content.toLowerCase().startsWith("!allsay")) {
-   const [name, ...args] = message.content.slice(3).split("y ");
-  message.delete()
-  message.channel.send(args[0])
-    }
+  message.channel.send(SayMessage)
   }
 });
 
-client.on('message', async message => {
-if(message.channel.id === "876405324989489192" && message.author.id === "759001587422462015" && message.content == "rin"){
-message.channel.send("rin")
-  }
-});
-
-client.login("ODk2OTc3NTU2NjUyMjk0MTU1.YfhyYA.UPWOzLvni8BL5YOYhJaRKhgJqbs")
+client.login("OTM3OTQ1Nzc3MTUyNTg5ODQ1.YjCeaw.XQQB9r0LbmaB7VE6M63u48Al8Cc")
