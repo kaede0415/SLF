@@ -38,7 +38,7 @@ function judge(message){
     if(message.content.match(/ファイアボール/)) return 7
     if(message.content.match(/エリクサーを持っていない/)) return 9
     if(message.content.match(/ダメージを受けた！/)) return 3
-    if(message.content.match(`${client.user.globalName}のHPは華麗にかわした！`)) return 3
+    if(message.content.match(`${client.user.globalName}のは華麗にかわした！`)) return 3
   }
   return undefined
 }
