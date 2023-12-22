@@ -116,16 +116,16 @@ client.on('messageCreate', async message => {
       const num = judge(message)
       if(num == undefined) return
       else if(num == 0) setTimeout(function(){ message.channel.send(`::atk`) },2000)
-      else if(num == 1){
+      /*else if(num == 1){
         if(message.embeds[0] && message.embeds[0].author.name && message.embeds[0].author.name.match(/超激レア|最強|大地の覇者|原初|ありがとう！|天使|龍帝|三女神/)){
-          message.channel.send("::luna <@707459939446161438>")}
+          message.channel.send("::luna <@&1187561350709379153>")}
         else{
           setTimeout(function(){ message.channel.send(`::atk`) },200)
         }
-      }
-      /*else if(num == 1){
+      }*/
+      else if(num == 1){
           setTimeout(function(){ message.channel.send(`::atk`) },200)
-        }*/
+        }
       else if(num == 2) setTimeout(function(){ message.channel.send(`::i f`) },200)
       else if(num == 3) setTimeout(function(){ message.channel.send(`::atk`) },200)
       else if(num == 4) setTimeout(function(){ message.channel.send(`::i e`) },200)
