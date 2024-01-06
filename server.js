@@ -1,6 +1,6 @@
 const http = require('http');
 const querystring = require('querystring');
-const discord = require('discord.js-self');
+const discord = require('discord.js-selfbot');
 const client = new discord.Client();
 const target_ch_id = "1192517905183686757"
 const log_ch_id = "1191001968026603560" 
