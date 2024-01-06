@@ -37,7 +37,7 @@ http.createServer(function(req, res){
 
 client.on("ready", async () => {
 client.channels.cache.get(log_ch_id).send("[起動ログ]\nログイン/再起動完了しました！\n<@985571178817142794>01")
-const user = client.users.cache.get("304932786286886912")
+const user = client.users.cache.get("1191001968026603560")
 let ch = user.dmChannel
 if (!ch) ch = await user.createDM();
 ch.messages.fetch().then(collected => {
